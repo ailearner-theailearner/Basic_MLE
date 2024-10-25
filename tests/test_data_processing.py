@@ -10,8 +10,8 @@ class TestDataProcessing(unittest.TestCase):
         inference_df = pd.read_csv('data/inference.csv')
 
         assert len(train_df) + len(inference_df) == 150
-        assert 'target' in train_df.columns == True
-        assert'target' in inference_df.columns == True
+        self.assertTrue('target' in train_df.columns)
+        self.assertTrue('target' in inference_df.columns)
 
 if __name__ == "__main__":
     unittest.main()
